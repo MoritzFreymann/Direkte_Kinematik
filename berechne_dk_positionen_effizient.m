@@ -67,7 +67,7 @@ function rob = berechne_dk_positionen_effizient(rob,aktuelles_gelenk,aktueller_z
                          ]';    % i_A_v = v_A_i^T
                      
         % Verschiebungsvektor vom Vorgaenger zum Koerper i im KOS des
-        % Vorgaengers (Bv) fuer erechnung der Geschwindkeiten
+        % Vorgaengers (Bv) fuer Berechnung der Geschwindkeiten
         rob.kl(i).Bv_r_vi = [                      rob.kl(i).a;...
                              -sin(rob.kl(i).alpha)*rob.kl(i).d;...
                               cos(rob.kl(i).alpha)*rob.kl(i).d];
