@@ -22,11 +22,11 @@ function rob = erstelle_roboter()
 
     rob.kl(2).alpha = pi/2;
     rob.kl(2).a = 0;
-    rob.kl(2).d = -0.0009;  % ???
+    rob.kl(2).d = 0
 
     rob.kl(3).alpha = pi;
     rob.kl(3).a = 0.184;
-    rob.kl(3).d = -0.0009;  % ???
+    rob.kl(3).d = 0
 
     rob.kl(4).alpha = -pi/2;
     rob.kl(4).a = 0.103;
