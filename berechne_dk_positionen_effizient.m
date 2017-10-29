@@ -9,7 +9,7 @@ function rob = berechne_dk_positionen_effizient(rob,aktuelles_gelenk,aktueller_z
     % Berechnung fuer Koerper 1
     if ( aktuelles_gelenk == 1)
         
-        erstes_gelenk = 2;  % erstes Gelenk, das in Schleife rekursiv berechnet wird ist das 2.
+        aktuelles_gelenk = 2;  % erstes Gelenk, das in Schleife rekursiv berechnet wird ist das 2.
         
         i = 1;
         % Relativkinematik: Position und Orientierung relativ zum Vorgaenger
@@ -46,11 +46,9 @@ function rob = berechne_dk_positionen_effizient(rob,aktuelles_gelenk,aktueller_z
                                 rob.kl(i).D_0i(2,4);
                                 rob.kl(i).D_0i(3,4)
                             ];  % 0_r_0,i = - 0_r_i,0
-    else
-        erstes_gelenk = aktuelles_gelenk;
     end
     % Berechnung fuer alle Koerper
-    for i = erstes_gelenk:rob.N_Q
+    for i = aktuelles_gelenk:rob.N_Q
         % Index des Vorgaengers merken
         vor = rob.kl(i).vorgaenger;
 
