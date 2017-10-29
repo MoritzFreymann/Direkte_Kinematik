@@ -10,7 +10,7 @@ rob = erstelle_roboter();
 
 % Parameter der Bahn
 q_a = zeros(rob.N_Q,1);         % Anfangswinkel (in Radiant)
-q_e = pi/4 * ones(rob.N_Q,1);   % Endwinkel (in Radiant)
+q_e = pi/2 * ones(rob.N_Q,1);   % Endwinkel (in Radiant)
 T_ges = 2.0;                    % Gesamtdauer der Bewegung (in Sekunden)
 
 % Setze Anfangsgelenkwinkel
