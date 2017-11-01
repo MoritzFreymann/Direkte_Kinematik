@@ -40,6 +40,6 @@ function rob = berechne_dk_geschwindigkeiten(rob)
     end
 
     % Geschwindigkeit des TCP im B0-System berechnen
-    rob.dot_w = rob.kl(rob.N_Q).A_i0 * ( rob.kl(rob.N_Q).Bi_dot_r_i + tilde(rob.kl(rob.N_Q).Bi_omega) * rob.BN_r_N_tcp );
+    rob.dot_w = rob.kl(rob.N_Q).A_i0' * ( rob.kl(rob.N_Q).Bi_dot_r_i + tilde(rob.kl(rob.N_Q).Bi_omega) * rob.BN_r_N_tcp );
     %% --- ENDE ARBEITSBEREICH --------------------------------------------
 end
