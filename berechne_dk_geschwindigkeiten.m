@@ -33,10 +33,10 @@ function rob = berechne_dk_geschwindigkeiten(rob)
 
         % Absolute Translationsgeschwindigkeit berechnen
         % ----------------------------------------------
-        % allg: 0_v_i = 0_A_v * ( v_v_v + v_tilde_omega * v_r_v,i + v_dot_r_v,i )
+        % allg: i_v_i = i_A_v * ( v_v_v + v_tilde_omega * v_r_v,i + v_dot_r_v,i )
         % hier: v_dot_r_v,i = 0
         % ----------------------------------------------
-        rob.kl(i).Bi_dot_r_i = rob.kl(vor).A_i0 * ( rob.kl(vor).Bi_dot_r_i + tilde(rob.kl(vor).Bi_omega) * rob.kl(i).Bv_r_vi );
+        rob.kl(i).Bi_dot_r_i = rob.kl(i).A_iv * ( rob.kl(vor).Bi_dot_r_i + tilde(rob.kl(vor).Bi_omega) * rob.kl(i).Bv_r_vi );
     end
 
     % Geschwindigkeit des TCP im B0-System berechnen
